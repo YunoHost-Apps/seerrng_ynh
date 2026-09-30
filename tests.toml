@@ -2,5 +2,7 @@
 
 test_format = 1.0
 
+#donotmerge
+
 [default]
 exclude = ["install.subdir", "change_url"]
