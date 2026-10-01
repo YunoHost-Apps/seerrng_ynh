@@ -10,7 +10,7 @@ It shall NOT be edited by hand.
 
 Media request management for movies, television, music, comics, and books
 
-[![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](https://github.com/YunoHost-Apps/seerrng)
+[![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](https://github.com/snapetech/seerrng)
 [![Version: 3.39.3~ynh1](https://img.shields.io/badge/Version-3.39.3~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/seerrng/)
 
 <div align="center">
@@ -22,7 +22,7 @@ Media request management for movies, television, music, comics, and books
 
 [![Automatic tests level](https://apps.yunohost.org/badge/cilevel/seerrng)](https://ci-apps.yunohost.org/ci/apps/seerrng/)
 
-🛠️ Upstream SeerrNG repository: <https://github.com/YunoHost-Apps/seerrng>
+🛠️ Upstream SeerrNG repository: <https://github.com/snapetech/seerrng>
 
 Pull request are welcome and should target the [`testing` branch](https://github.com/YunoHost-Apps/seerrng_ynh/tree/testing).
 
