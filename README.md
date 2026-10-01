@@ -35,11 +35,6 @@ sudo yunohost app install https://github.com/YunoHost-Apps/seerrng_ynh/tree/test
 sudo yunohost app upgrade seerrng -u https://github.com/YunoHost-Apps/seerrng_ynh/tree/testing
 ```
 
-You can also switch to the testing branch to update from testing by default (as same as for APT when you chose to use a testing repos) with this command:
-```bash
-sudo yunohost app setting seerrng upgrade_channel -v testing
-```
-
 ### 📚 App packaging documentation
 
-Please see <https://doc.yunohost.org/dev/packaging/> for more information.
+Please see <https://doc.yunohost.org/packaging_apps> for more information.
