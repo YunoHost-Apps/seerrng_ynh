@@ -10,7 +10,7 @@ It shall NOT be edited by hand.
 
 Media request management for movies, television, music, comics, and books
 
-[![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](https://github.com/snapetech/seerrng)
+[![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](https://github.com/YunoHost-Apps/seerrng)
 [![Version: 3.39.3~ynh1](https://img.shields.io/badge/Version-3.39.3~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/seerrng/)
 
 <div align="center">
@@ -22,7 +22,7 @@ Media request management for movies, television, music, comics, and books
 
 [![Automatic tests level](https://apps.yunohost.org/badge/cilevel/seerrng)](https://ci-apps.yunohost.org/ci/apps/seerrng/)
 
-🛠️ Upstream SeerrNG repository: <https://github.com/snapetech/seerrng>
+🛠️ Upstream SeerrNG repository: <https://github.com/YunoHost-Apps/seerrng>
 
 Pull request are welcome and should target the [`testing` branch](https://github.com/YunoHost-Apps/seerrng_ynh/tree/testing).
 
@@ -35,6 +35,11 @@ sudo yunohost app install https://github.com/YunoHost-Apps/seerrng_ynh/tree/test
 sudo yunohost app upgrade seerrng -u https://github.com/YunoHost-Apps/seerrng_ynh/tree/testing
 ```
 
+You can also switch to the testing branch to update from testing by default (as same as for APT when you chose to use a testing repos) with this command:
+```bash
+sudo yunohost app setting seerrng upgrade_channel -v testing
+```
+
 ### 📚 App packaging documentation
 
-Please see <https://doc.yunohost.org/packaging_apps> for more information.
+Please see <https://doc.yunohost.org/dev/packaging/> for more information.
