@@ -5,7 +5,7 @@ packaging_format = 2
 id = "seerrng"
 name = "SeerrNG"
 description.en = "Media request management for movies, television, music, comics, and books"
-version = "3.39.3~ynh1"
+version = "3.45.2~ynh1"
 maintainers = ["snapetech"]
 
 [upstream]
@@ -44,13 +44,10 @@ ram.runtime = "512M"
     [resources.sources.main]
     in_subdir = true
     format = "tar.gz"
-    amd64.url = "https://github.com/snapetech/seerrng/releases/download/v3.39.3/seerrng-v3.39.3-linux-x64.tar.gz"
-    amd64.sha256 = "d984e06d4390f0858cca1b03bd90b407bd7c6fb9f411a0ed56e797c547b13f24"
-    arm64.url = "https://github.com/snapetech/seerrng/releases/download/v3.39.3/seerrng-v3.39.3-linux-arm64.tar.gz"
-    arm64.sha256 = "66b4b85bc87aa0235e1cb4436cdc9b4b86e90e8666cf579fcdfb3f4fea72ad9c"
-    autoupdate.strategy = "latest_github_release"
-    autoupdate.asset.amd64 = "^seerrng-v.*-linux-x64\\.tar\\.gz$"
-    autoupdate.asset.arm64 = "^seerrng-v.*-linux-arm64\\.tar\\.gz$"
+    amd64.url = "https://github.com/snapetech/seerrng/releases/download/v3.45.2/seerrng-v3.45.2-linux-x64.tar.gz"
+    amd64.sha256 = "cc29961d5e1ebcbe8df7d305bb5ccf0496e2dd960f29fba880e023e2c528d1cf"
+    arm64.url = "https://github.com/snapetech/seerrng/releases/download/v3.45.2/seerrng-v3.45.2-linux-arm64.tar.gz"
+    arm64.sha256 = "3ef81a00f488f36d32b43665f0cf1518db733b46a5efbabc2333d27704382a0a"
 
   [resources.system_user]
 
@@ -66,7 +63,7 @@ ram.runtime = "512M"
   main.default = 5055
 
   [resources.nodejs]
-  version = "24"
+  version = "22"
 
   [resources.apt]
     packages = "rsync"

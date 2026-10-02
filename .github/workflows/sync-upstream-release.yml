@@ -1,0 +1,58 @@
+name: Sync latest SeerrNG release
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: sync-upstream-release
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out package repository
+        uses: actions/checkout@v4
+
+      - name: Update manifest to latest stable release
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/sync_upstream_release.py
+
+      - name: Create or update release sync pull request
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- manifest.toml; then
+            echo "Manifest already matches the latest stable release."
+            exit 0
+          fi
+
+          release_version="$(sed -n 's/^version = "\([0-9.]*\)~ynh[0-9]*"$/\1/p' manifest.toml | head -n 1)"
+          if [ -z "$release_version" ]; then
+            echo "Could not read the updated package version." >&2
+            exit 1
+          fi
+
+          branch="automation/sync-seerrng-release"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add manifest.toml
+          git commit -m "chore(yunohost): sync SeerrNG $release_version"
+          git push --force origin "$branch"
+
+          if ! gh pr list --head "$branch" --state open --json number --jq '.[0].number' | grep -q .; then
+            gh pr create \
+              --base main \
+              --head "$branch" \
+              --title "Update SeerrNG to v$release_version" \
+              --body "Automated package sync for the latest published SeerrNG release. The manifest uses the release's Linux amd64/arm64 archives and verified SHA-256 checksums."
+          fi
