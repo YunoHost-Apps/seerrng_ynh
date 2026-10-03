@@ -17,13 +17,8 @@ name and a separate data directory.
 
 Use YunoHost's normal app backup, restore, and upgrade commands. The package
 updates from SeerrNG's published Linux release archives and verifies each
-download against its pinned SHA-256 checksum. YunoHost provisions Node.js 22
+download against its pinned SHA-256 checksum. YunoHost provisions Node.js 24
 for the service.
-
-An automated workflow checks SeerrNG's latest stable release every six hours
-and opens or updates a package pull request with the release archives and
-checksums. The new package version becomes available after that pull request
-passes YunoHost's package checks and is merged.
 
 The SeerrNG service binds to localhost behind YunoHost's Nginx proxy. Keep the
 allocated app port private. Do not expose it directly to the network.
