@@ -11,7 +11,7 @@ It shall NOT be edited by hand.
 Media request management for movies, television, music, comics, and books
 
 [![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](https://github.com/snapetech/seerrng)
-[![Version: 3.39.3~ynh1](https://img.shields.io/badge/Version-3.39.3~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/seerrng/)
+[![Version: 3.48.2~ynh1](https://img.shields.io/badge/Version-3.48.2~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/seerrng/)
 
 <div align="center">
 <a href="https://apps.yunohost.org/app/seerrng"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_more_info_on_the_appstore.svg"/></a>
